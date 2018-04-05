@@ -1,0 +1,119 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eaeaea"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.example.gabriellekibouka.testguide.fragment.itemAccueil">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="true"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Include of the Search Bar -->
+            <include layout="@layout/layout_card_search" />
+
+
+            <!-- Separator -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_xmedium" />
+
+
+            <!-- ==== SubHead TextView Bonus ==== -->
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:drawablePadding="@dimen/spacing_small"
+                android:drawableRight="@drawable/ic_local_offer_24dp"
+                android:drawableTint="@color/grey_700"
+                android:gravity="center_vertical"
+                android:text="Bonus  "
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/grey_700"
+                android:textStyle="bold" />
+
+            <!-- HorizentalScrollView parent container of Recyclerview Entreprise A La Une -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="@dimen/spacing_small"
+                android:background="#eaeaea"
+                android:orientation="horizontal"
+                android:scrollbars="none">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycleViewNews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </HorizontalScrollView>
+
+
+            <!-- Separator -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/spacing_small" />
+
+            <!-- Container of Recyclerview Entreprise -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <!-- ==== SubHead TextView Entreprise ==== -->
+                <TextView
+                    android:id="@+id/textViewEntreprise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center_vertical"
+                    android:text="Entreprise  "
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/grey_700"
+                    android:textStyle="bold" />
+
+                <!-- Separator -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_middle" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <include layout="@layout/item_recycleview_entreprise" />
+
+                <!-- Separator -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/spacing_middle" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>
+

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Accueil" />
+        <item
+            android:id="@+id/nav_news"
+            android:icon="@drawable/ic_notifications24dp"
+            android:title="A la une" />
+        <item
+            android:id="@+id/nav_event"
+            android:icon="@drawable/ic_insert_invitation_black_24dp"
+            android:title="Evènement"/>
+        <item
+            android:id="@+id/nav_entreprise"
+            android:title="Entreprises">
+            <menu>
+                <item
+                    android:id="@+id/nav_entreprise1"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Eaux et forêts" />
+                <item
+                    android:id="@+id/nav_entreprise2"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Industrie" />
+                <item
+                    android:id="@+id/nav_entreprise3"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="BTP" />
+                <item
+                    android:id="@+id/nav_entreprise4"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Commerce" />
+                <item
+                    android:id="@+id/nav_entreprise5"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Service" />
+                <item
+                    android:id="@+id/nav_entreprise6"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Artisanat" />
+                <item
+                    android:id="@+id/nav_entreprise7"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Association " />
+            </menu></item>
+
+       <!-- <item
+            android:id="@+id/nav_utilitaire"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Utilitaire" >
+            <menu>
+
+                <item
+                    android:id="@+id/nav_entreprise8"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Gouvernement du Congo" />
+                <item
+                    android:id="@+id/nav_entreprise9"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Généralité sur le Congo" />
+                <item
+                    android:id="@+id/nav_entreprise10"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Ambassade acrédité au Congo" />
+                <item
+                    android:id="@+id/nav_entreprise11"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Ambassade du Congo a l'étranger" />
+                <item
+                    android:id="@+id/nav_entreprise12"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Organisation internationale" />
+                <item
+                    android:id="@+id/nav_entreprise13"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="jours fériés nationaux" />
+            </menu>
+        </item> !-->
+
+    </group>
+
+</menu>

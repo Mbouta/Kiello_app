@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/slide_app_bar_height"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.gabriellekibouka.testguide.MainActivity">
+
+
+    <!-- ====== Layout viewPager use for displaying ImageAutoSlide ========-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/slide_app_bar_height"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/grey_20" />
+
+    <!-- ========= Layout RelativeLayout use to blure Image of ViewPager ========== -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/slide_app_bar_height"
+        android:background="#5f000000">
+
+
+    </RelativeLayout>
+
+    <!-- Container of TextView Slide -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/spacing_xxlarge"
+        android:layout_marginLeft="@dimen/spacing_large"
+        android:layout_marginRight="@dimen/spacing_large"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_slide_titre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Titre"
+            android:textColor="#FFF"
+            android:textAlignment="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+
+        <!-- Separator entre slide titre & description -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/spacing_middle" />
+
+        <TextView
+            android:id="@+id/tv_slide_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Description"
+            android:textColor="#c7ffffff"
+            android:textAlignment="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+
+    </LinearLayout>
+
+    <!-- ======== Card use for Search ========= -->
+    <android.support.v7.widget.CardView
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_xxlarge"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/spacing_mlarge"
+        android:layout_marginLeft="@dimen/spacing_large"
+        android:layout_marginRight="@dimen/spacing_large"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        app:cardBackgroundColor="#c8ffffff"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="4dp">
+
+        <!-- ======== First Container =========-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!-- ======== Layout View use like separator(or spacing) ======= -->
+            <View
+                android:layout_width="@dimen/spacing_large"
+                android:layout_height="0dp" />
+
+            <!-- =========== Layout EditText use to enter Search element =======-->
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/spacing_small"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="Search Entreprises"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <!-- ========= Layout ImageButton for Icon Search =======-->
+            <ImageButton
+                android:id="@+id/img_btn"
+                android:layout_width="@dimen/spacing_xxlarge"
+                android:layout_height="@dimen/spacing_xxlarge"
+                android:background="@color/amber_400"
+                android:clickable="true"
+                android:tint="@color/grey_60"
+                app:srcCompat="@drawable/ic_search"
+                tools:ignore="VectorDrawableCompat" />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</android.support.design.widget.CoordinatorLayout>
