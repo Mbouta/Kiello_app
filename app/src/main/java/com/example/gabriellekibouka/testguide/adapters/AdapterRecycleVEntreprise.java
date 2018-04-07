@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.gabriellekibouka.testguide.R;
 import com.example.gabriellekibouka.testguide.objets.Entreprise;
+import com.github.vipulasri.timelineview.TimelineView;
 
 import java.util.List;
 

@@ -25,9 +25,11 @@ import com.example.gabriellekibouka.testguide.R;
 import com.example.gabriellekibouka.testguide.activity.DetailsActivity;
 import com.example.gabriellekibouka.testguide.adapters.AdapterRecycleVEntreprise;
 import com.example.gabriellekibouka.testguide.adapters.AdapterRecycleVEntrepriseAlaUne;
+import com.example.gabriellekibouka.testguide.adapters.AdapterRecycleVTimeLine;
 import com.example.gabriellekibouka.testguide.model.Image;
 import com.example.gabriellekibouka.testguide.objets.ALaUne;
 import com.example.gabriellekibouka.testguide.objets.Entreprise;
+import com.example.gabriellekibouka.testguide.objets.TimeLine;
 import com.example.gabriellekibouka.testguide.utils.Tools;
 
 import java.util.ArrayList;
@@ -37,9 +39,11 @@ import java.util.List;
 public class itemAccueil extends Fragment {
     //    String titre="Accueil";
     private RecyclerView recyclerViewAlaUne;
-    private RecyclerView recyclerViewEntreprise;
+//    private RecyclerView recyclerViewEntreprise;
+    private RecyclerView recyclerViewTimeline;
     private LinearLayoutManager layoutManagerAlaUne;
-    private LinearLayoutManager layoutManagerEntreprise;
+//    private LinearLayoutManager layoutManagerEntreprise;
+    private LinearLayoutManager layoutManagerTimeline;
 
     private View view;
 
@@ -108,12 +112,13 @@ public class itemAccueil extends Fragment {
         });
 
         //Recycleview pour afficher une liste generale d'entreprie
-        recyclerViewEntreprise = (RecyclerView) view.findViewById(R.id.recycleView);
-        layoutManagerEntreprise = new LinearLayoutManager(context);
-        layoutManagerEntreprise.setOrientation(LinearLayoutManager.VERTICAL);
-        recyclerViewEntreprise.setLayoutManager(layoutManagerEntreprise);
+        recyclerViewTimeline = (RecyclerView) view.findViewById(R.id.recycleView);
+        layoutManagerTimeline = new LinearLayoutManager(context);
+        layoutManagerTimeline.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerViewTimeline.setLayoutManager(layoutManagerTimeline);
 
-        recyclerViewEntreprise.setAdapter(new AdapterRecycleVEntreprise(entrepriseList(), context));
+        List<TimeLine> timeLines = new ArrayList<>();
+        recyclerViewTimeline.setAdapter(new AdapterRecycleVTimeLine(timeLines, context));
 
         /* ============ Initialisation of initCompoment ================*/
         initCompment();

@@ -31,5 +31,5 @@ dependencies {
     compile 'com.antapp.inspiration:flash-ws:1.0-beta'
     compile 'com.android.support:cardview-v7:27.1.0'
     compile 'com.android.support:recyclerview-v7:27.1.0'
-//    implementation files('libs/glide-3.7.0.jar')
+    compile 'com.github.vipulasri:timelineview:1.0.6'
 }
