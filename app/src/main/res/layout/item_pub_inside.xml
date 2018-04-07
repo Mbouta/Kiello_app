@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <com.github.vipulasri.timelineview.TimelineView
+            android:id="@+id/time_marker"
+            android:layout_width="wrap_content"
+            android:paddingLeft="15dp"
+            android:layout_height="match_parent"
+            app:marker="@drawable/bg_action"
+            app:markerInCenter="true"
+            app:markerSize="12dp"
+            app:lineSize="1dp"
+            app:line="@color/colorAccent"/>
+
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_vertical"
+            app:cardElevation="3dp"
+            app:contentPaddingTop="20dp"
+            app:contentPaddingRight="10dp"
+            app:contentPaddingLeft="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/l1"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/logo_april"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/name_from"
+                                android:text="April"
+                                android:textColor="@color/colorAccent"
+                                android:textSize="15dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/date"
+                                android:text="@string/sponsor_title"
+                                android:textSize="12dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imageVEntreprise"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/image" />
+
+                        <RelativeLayout
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:id="@+id/titre"
+                                android:textColor="#504d4d"
+                                android:text="Licensed under the Apache "
+                                android:textSize="14dp"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content" />
+
+                            <Button
+                                android:text="action"
+                                android:clickable="true"
+                                android:textColor="@color/colorAccent"
+                                android:background="@drawable/bg_action"
+                                android:layout_alignParentRight="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:background="#ccc"
+                        android:layout_height="2dp" />
+
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+
+
+
+    </LinearLayout>
