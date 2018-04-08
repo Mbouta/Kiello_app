@@ -8,16 +8,18 @@ public class TimeLine {
     String id;
     String titre;
     String contenu;
+    String auteur;
     String logoFrom;
     String endPoint;
     String image;
     String date;
 
 
-    public TimeLine(String id, String titre, String contenu, String logoFrom, String endPoint, String image, String date) {
+    public TimeLine(String id, String titre, String contenu, String auteur, String logoFrom, String endPoint, String image, String date) {
         this.id = id;
         this.titre = titre;
         this.contenu = contenu;
+        this.auteur = auteur;
         this.logoFrom = logoFrom;
         this.endPoint = endPoint;
         this.image = image;
@@ -78,6 +80,14 @@ public class TimeLine {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getAuteur() {
+        return auteur;
+    }
+
+    public void setAuteur(String auteur) {
+        this.auteur = auteur;
     }
 }
 

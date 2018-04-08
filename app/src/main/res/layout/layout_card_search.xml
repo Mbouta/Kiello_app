@@ -111,7 +111,7 @@
                 android:id="@+id/img_btn"
                 android:layout_width="@dimen/spacing_xxlarge"
                 android:layout_height="@dimen/spacing_xxlarge"
-                android:background="@color/amber_400"
+                android:background="@color/colorAccent"
                 android:clickable="true"
                 android:tint="@color/grey_60"
                 app:srcCompat="@drawable/ic_search"

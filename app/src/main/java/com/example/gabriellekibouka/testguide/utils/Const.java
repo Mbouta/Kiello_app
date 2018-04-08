@@ -5,7 +5,7 @@ package com.example.gabriellekibouka.testguide.utils;
  */
 
 public class Const {
-    public static String GET_TIMELINE = "https://sandboxws.000webhostapp.com/ws-annuaire/entreprise/get_entreprise.php";
+    public static String GET_TIMELINE = "https://sandboxws.000webhostapp.com/ws-annuaire/timeline/get_timeline.php";
     public static String GET_ENTREPRISE = "https://sandboxws.000webhostapp.com/ws-annuaire/entreprise/get_entreprise.php";
     public static String GET_ENTREPRISE_BY_CAT = "https://sandboxws.000webhostapp.com/ws-annuaire/entreprise/select_entreprise_by_cat.php";
     public static String GET_ENTREPRISE_BY_ID = "https://sandboxws.000webhostapp.com/ws-annuaire/entreprise/select_entreprise_by_id.php";

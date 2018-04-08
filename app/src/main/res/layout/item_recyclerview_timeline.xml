@@ -3,13 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <com.github.vipulasri.timelineview.TimelineView
         android:id="@+id/time_marker"
         android:layout_width="wrap_content"
-        android:paddingLeft="15dp"
+        android:paddingLeft="5dp"
         android:layout_height="match_parent"
         app:marker="@drawable/bg_timeline"
         app:markerInCenter="true"
@@ -20,16 +21,15 @@
 
 
     <android.support.v7.widget.CardView
+        android:id="@+id/cardViewItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
-        android:layout_marginLeft="25dp"
-        android:layout_gravity="center_vertical"
-        app:cardElevation="3dp"
-        app:contentPaddingTop="20dp"
-        app:contentPaddingRight="10dp"
-        app:contentPaddingLeft="10dp">
+        android:layout_marginLeft="15dp"
+        app:cardElevation="1dp"
+        android:backgroundTint="#41cccccc"
+        app:contentPaddingTop="15dp"
+        app:contentPaddingRight="5dp"
+        app:contentPaddingLeft="5dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -49,10 +49,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <ImageView
-                    android:src="@drawable/logo_total"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp" />
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/logo_from"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        app:civ_border_width="1dp"
+                        app:civ_border_color="#e7cccccc"/>
+
 
                 <LinearLayout
                     android:orientation="vertical"
@@ -69,7 +73,7 @@
                         android:layout_height="wrap_content" />
 
                     <TextView
-                        android:id="@+id/date"
+                        android:id="@+id/dates"
                         android:text="il ya 10 min"
                         android:textSize="12dp"
                         android:layout_width="wrap_content"
@@ -89,28 +93,30 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:id="@+id/imageVEntreprise"
+                        android:id="@+id/image_banner"
                         android:layout_width="match_parent"
                         android:layout_height="180dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/image" />
 
                     <TextView
-                        android:layout_marginTop="10dp"
-                        android:id="@+id/titre"
+                        android:id="@+id/titres"
                         android:textColor="#504d4d"
                         android:text="Licensed under the Apache License, Version 2.0 "
                         android:textSize="16dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="15dp"
+                        android:paddingLeft="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
 
                 </LinearLayout>
 
-                <View
+              <!--  <View
                     android:layout_marginTop="20dp"
                     android:layout_width="match_parent"
-                    android:background="#ccc"
-                    android:layout_height="2dp" />
+                    android:background="#c2bfbf"
+                    android:layout_height="2dp" />-->
 
 
             </LinearLayout>
@@ -120,9 +126,5 @@
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>
-
-
-
-
 
 </android.support.constraint.ConstraintLayout>

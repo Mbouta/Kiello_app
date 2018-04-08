@@ -9,7 +9,7 @@
         <com.github.vipulasri.timelineview.TimelineView
             android:id="@+id/time_marker"
             android:layout_width="wrap_content"
-            android:paddingLeft="15dp"
+            android:paddingLeft="5dp"
             android:layout_height="match_parent"
             app:marker="@drawable/bg_action"
             app:markerInCenter="true"
@@ -17,15 +17,13 @@
             app:lineSize="1dp"
             app:line="@color/colorAccent"/>
 
-
-
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:layout_gravity="center_vertical"
-            app:cardElevation="3dp"
+            app:cardElevation="4dp"
             app:contentPaddingTop="20dp"
             app:contentPaddingRight="10dp"
             app:contentPaddingLeft="10dp">
@@ -38,6 +36,8 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
                     android:id="@+id/l1"
                     android:orientation="vertical"
                     android:layout_width="match_parent"
@@ -98,6 +98,7 @@
 
                         <RelativeLayout
                             android:layout_marginTop="8dp"
+                            android:layout_marginBottom="10dp"
                             android:orientation="horizontal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
@@ -125,12 +126,6 @@
 
 
                     </LinearLayout>
-
-                    <View
-                        android:layout_marginTop="8dp"
-                        android:layout_width="match_parent"
-                        android:background="#ccc"
-                        android:layout_height="2dp" />
 
 
                 </LinearLayout>

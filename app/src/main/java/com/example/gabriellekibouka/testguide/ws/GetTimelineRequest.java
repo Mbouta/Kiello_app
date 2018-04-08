@@ -2,6 +2,7 @@ package com.example.gabriellekibouka.testguide.ws;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.VolleyError;
@@ -25,13 +26,11 @@ import java.util.List;
 public class GetTimelineRequest implements AntappNetWorkHelper {
 
     private Context context;
-    private String url;
     private Object progressObject;
     private RecyclerView recyclerViewTimeline;
 
-    public GetTimelineRequest(Context context, String url, Object progressObject, RecyclerView recyclerViewTimeline) {
+    public GetTimelineRequest(Context context, Object progressObject, RecyclerView recyclerViewTimeline) {
         this.context = context;
-        this.url = url;
         this.progressObject = progressObject;
         this.recyclerViewTimeline = recyclerViewTimeline;
     }
@@ -51,8 +50,6 @@ public class GetTimelineRequest implements AntappNetWorkHelper {
 
                     recyclerViewTimeline.setAdapter(new AdapterRecycleVTimeLine(timeLinesList,context));
 
-                    //passer a ladapter que vous pouvez passer dans le constructeur
-
                 }
 
             }
@@ -61,6 +58,8 @@ public class GetTimelineRequest implements AntappNetWorkHelper {
             public void onListResponse(JSONArray jsonArray, List<?> myObjectlist) {
                 List<TimeLine> timeLinesList = (List<TimeLine>) myObjectlist;
 
+                Log.e("size",timeLinesList.size()+"");
+                recyclerViewTimeline.setAdapter(new AdapterRecycleVTimeLine(timeLinesList,context));
             }
 
             @Override

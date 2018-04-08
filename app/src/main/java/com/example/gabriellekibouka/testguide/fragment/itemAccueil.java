@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -31,6 +32,7 @@ import com.example.gabriellekibouka.testguide.objets.ALaUne;
 import com.example.gabriellekibouka.testguide.objets.Entreprise;
 import com.example.gabriellekibouka.testguide.objets.TimeLine;
 import com.example.gabriellekibouka.testguide.utils.Tools;
+import com.example.gabriellekibouka.testguide.ws.GetTimelineRequest;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -102,6 +104,7 @@ public class itemAccueil extends Fragment {
         recyclerViewAlaUne.setAdapter(adapterRecycleVEntrepriseAlaUne);
 
         ImageButton img_btn = (ImageButton) view.findViewById(R.id.img_btn);
+        ProgressBar progress = (ProgressBar) view.findViewById(R.id.progressBar);
 
         img_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -116,6 +119,9 @@ public class itemAccueil extends Fragment {
         layoutManagerTimeline = new LinearLayoutManager(context);
         layoutManagerTimeline.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerViewTimeline.setLayoutManager(layoutManagerTimeline);
+
+        //appelle au ws
+        new GetTimelineRequest(getContext(),progress,recyclerViewTimeline).onNetworkRequest();
 
         List<TimeLine> timeLines = new ArrayList<>();
         recyclerViewTimeline.setAdapter(new AdapterRecycleVTimeLine(timeLines, context));

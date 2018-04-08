@@ -21,11 +21,12 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.Translucent"></activity>
+            android:theme="@style/AppTheme.Translucent" />
+        <activity android:name=".activity.DetailsActivity" />
         <activity
-            android:name=".activity.DetailsActivity">
-
-        </activity>
+            android:name=".activity.DetailTimelineActivity"
+            android:label="@string/title_activity_detail_timeline"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
